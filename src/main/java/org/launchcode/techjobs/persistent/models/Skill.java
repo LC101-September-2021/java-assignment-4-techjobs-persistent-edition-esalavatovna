@@ -11,7 +11,7 @@ import java.util.List;
 public class Skill extends AbstractEntity {
 private String description;
 
-    @ManyToMany ( mappedBy="skills")
+    @ManyToMany(mappedBy="skills")
     private List<Job> jobs = new ArrayList<>();
 
     public Skill(){}
@@ -27,5 +27,13 @@ private String description;
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
+
+    public void setJobs(List<Job> jobs) {
+        this.jobs = jobs;
     }
 }
